@@ -1,6 +1,6 @@
 # pip install pandas
 import pandas as pd
-df = pd.read_csv('air_quality.csv')
+# df = pd.read_csv('air_quality.csv')
 
 def distance(x1, y1, x2, y2):
     a = abs(x2-x1)
@@ -8,9 +8,17 @@ def distance(x1, y1, x2, y2):
     dist = (a*a+b*b)**0.5
     return dist
 
-distt = distance(1,5,1,2)
-a1 = df.iloc[0, 6]
-b1 = df.iloc[0, 7]
-print(b1)
-distt = distance(a1,b1,118,30)
-print(distt)
+def distToSens(x,y):
+    loc1 = (33.9, -117.51,)
+    loc2 = (33.92, -117.44)
+    loc3 = (33.92, -117.51)
+    dsens = [None]*3
+    dsens[0] = distance(x,y,loc1[0],loc1[1])
+    dsens[1] = distance(x,y,loc2[0],loc2[1])
+    dsens[2] = distance(x,y,loc3[0],loc3[1])
+
+    return dsens
+    
+
+x = distToSens(1,1)
+print(x)
