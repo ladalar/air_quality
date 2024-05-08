@@ -35,6 +35,6 @@ def distToSens(x,y):
 x = distToSens(1,1)
 print(x)
 
-# aqi_dist = (dist2 + dist3) / (dist1 + dist2 + dist3) * AQI1 + (dist1 + dist3) / (dist1 + dist2 + dist3) * AQI2 + (dist1 + dist2) / (dist1 +dist2 + dist3) * AQI3
+# aqi_dist = (dist2 + dist3) / 2 / (dist1 + dist2 + dist3) * AQI1 + (dist1 + dist3) / 2 / (dist1 + dist2 + dist3) * AQI2 + (dist1 + dist2) / 2 / (dist1 +dist2 + dist3) * AQI3
 # aqi2 = 0.2*aqi_temp+0.8*aqi_dist
 # print(aqi2)
