@@ -2,6 +2,13 @@
 import pandas as pd
 # df = pd.read_csv('air_quality.csv')
 
+def time_to_minutes(time_str):
+    hours, minutes = map(int, time_str.split(':'))
+    total_minutes = hours * 60 + minutes
+    return total_minutes
+
+df['Time_in_minutes'] = df['Time'].apply(lambda x: time_to_minutes(x))
+
 def distance(x1, y1, x2, y2):
     a = abs(x2-x1)
     b = abs(y2-y1)
