@@ -17,8 +17,8 @@ def distance(x1, y1, x2, y2):
 
 def aqi_from_temperature():
     temperature = float(input("Please enter the temperature: "))
-    aqi = -0.292366632068841*temperature*temperature+9.84969164097354*temperature-32.1722464255989
-    print(aqi)
+    aqi_temp = -0.292366632068841 * temperature * temperature + 9.84969164097354 * temperature - 32.1722464255989
+    print(aqi_temp)
 
 def distToSens(x,y):
     loc1 = (33.9, -117.51,)
